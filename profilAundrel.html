@@ -3,10 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aundrel Profil</title>
+    <title>Biodata Saya</title>
+    <link rel="stylesheet" href="styleAundrel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+       function tampilbiodata() {
+           document.querySelector("#biodataOndrel").innerHTML = `
+               <h2>Halo, saya Aundrel Aza Sadira!</h2>
+               <p><span class="star">★</span><strong>Nama Lengkap:</strong> Aundrel Aza Sadira </p>
+               <p><span class="star">★</span><strong>Tanggal Lahir:</strong> 24 November 2005 </p>
+               <p><span class="star">★</span><strong>Pendidikan:</strong> kuliah semester 3, Universitas Pembangunan Jaya </p>
+               <p><strong>Keahlian:</strong></p>
+               <ul>
+                   <li><span class="star">★</span>Public speaking</li>
+                   <li><span class="star">★</span>Content Creator</li>
+                   <li><span class="star">★</span>Desain UI/UX</li>
+               </ul>
+               <p><span class="star">★</span><strong>Hobi:</strong> Main Tiktok, Baking, Editing Vidio dan Public Speaking.</p>
+               <p><span class="star">★</span><strong>Fun Fact:</strong> saya sangat menyukai kegiatan sosial dan saya bergabung dalam UKM / organisasi "DAKAURI"!</p>
+               <p><em>"Just Do the Best."</em></p>
+           `;
+       }
+
+       function tampilpendidikan() {
+           document.querySelector("#biodataAundrel").innerHTML = `
+               <h2>Pendidikan Saya</h2>
+               <ul>
+                   <li><span class="star">★</span><strong>Sarjana Sistem Informasi</strong> - Universitas Pembangunan jaya (2023 - sampai sekarang)</li>
+                   <li><span class="star">★</span><strong>SMA Negeri 2 Tangerang Selatan</strong> - Jurusan IPA (2020-2023) </li>
+                   <li><span class="star">★</span><strong>SMP Al-Azhar Cairo Palembang</strong> (2017 - 2020)</li>
+               </ul>
+           `;
+       }
+
+       function tampilpengalaman() {
+           document.querySelector("#biodataOndrel").innerHTML = `
+               <h2>Pengalaman kerja, magang dan organisasi</h2>
+               <ul>
+                   <li><strong>Magang sebagai Content Creator Gilar Enterprise (juli 2024 - Sekarang)</strong></li>
+                   <li><strong>Freelance PT Marketminds Emas Indoensia</strong></li>
+                   <li><strong>PT Dajrum</strong></li>
+                   <li><strong>Public Relation Gidhub 2024</strong></li>
+                   <li><strong>BPH (Bendahara) DAKAURI</strong></li>
+                   <li><strong>MC Workshop GIDHUB 2024</strong></li>
+               </ul>
+           `;
+       }
+
+       function tampilkeahlian() {
+           document.querySelector("#biodataAundrel").innerHTML = `
+               <h2>Keahlian Saya</h2>
+               <ul>
+                   <li>Public Speaking</li>
+                   <li>BroadCasting</li>
+                   <li>Editing Vidio </li>
+               </ul>
+           `;
+       }
+
+       function tampilpublikasi() {
+           document.querySelector("#biodataOndrel").innerHTML = `
+               <h2>Publikasi Saya</h2>
+               <ul>
+                   <li><strong>Artikel:</strong> "Hasil Content Creator" (2023)</li>
+                   
+               </ul>
+           `;
+       }
+    </script>
 </head>
-<body>
-    <h1>Nama = Aundrel Aza Sadira </h1>
-    <h1>NIM = 2023081027 </h1>
+
+<body onload="tampilbiodata()">
+    <header>
+        <img src="aundrelFoto.jpg" alt="Foto Aundrelprofil" class="profile-photo">
+        <h1>Biodata Diri</h1>
+    </header>
+
+    <div id="main-content">
+        <nav>
+            <a href="#biodata" onclick="tampilbiodata();">Biodata</a>
+            <a href="#pendidikan" onclick="tampilpendidikan();">Pendidikan</a>
+            <a href="#pengalaman" onclick="tampilpengalaman();">Pengalaman</a>
+            <a href="#keahlian" onclick="tampilkeahlian();">Keahlian</a>
+            <a href="#publikasi" onclick="tampilpublikasi();">Publikasi</a>
+        </nav>
+
+        <section>
+            <div id="biodataOndrel"></div>
+        </section>
+
+        <aside>
+            <h3>Hobi</h3>
+            <ul>
+                <li>Main Tiktok</li>
+                <li>Baking</li>
+                <li>Editing Vidio</li>
+                <li>Public Speaking</li>
+                
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>aundrel cantik banget dah angkatan 2023.</p>
+        <p>© 2024. All rights reserved.</p>
+        <div class="social-media">
+
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
