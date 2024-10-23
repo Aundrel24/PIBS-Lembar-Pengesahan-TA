@@ -1,0 +1,272 @@
+/* Star Styles */
+.star {
+    color: #ffd700; /* Gold color for the stars */
+    margin-right: 5px; /* Space between star and text */
+    font-size: 1.2em; /* Slightly larger stars */
+}
+
+
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #ffe6f0 25%, #e0f7fa 75%);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+header, footer {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    background: linear-gradient(45deg, #ff80ab, #82b1ff); /* Pink and Blue */
+}
+
+/* Navigation styles */
+nav, section, aside {
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* For absolute positioning of border */
+}
+
+nav {
+    background-color: #ffccf9; /* Soft Pink */
+    width: 25%;
+    float: left;
+    text-align: center;
+    border: 4px solid transparent; /* Border for the unique frame */
+    background-clip: padding-box; /* Clip background to inner box */
+}
+
+nav::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(45deg, #ff80ab, #ff99cc); /* Gradient border */
+    border-radius: 10px; /* Rounded corners */
+    z-index: -1; /* Place behind the nav */
+}
+
+nav a {
+    display: block; /* Block display for clickable area */
+    color: #333;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+nav a:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: #ff99cc; /* Bright Pink */
+}
+
+section {
+    background-color: #b3e5fc; /* Light Blue */
+    width: 50%;
+    float: left;
+    text-align: center;
+    border: 4px solid transparent; /* Border for the unique frame */
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(45deg, #82b1ff, #b3e5fc); /* Gradient border */
+    border-radius: 10px; /* Rounded corners */
+    z-index: -1; /* Place behind the section */
+}
+
+aside {
+    background-color: #ffb3c1; /* Pink */
+    width: 25%;
+    float: left;
+    text-align: center;
+    border: 4px solid transparent; /* Border for the unique frame */
+}
+
+aside::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(45deg, #ff80ab, #ffb3c1); /* Gradient border */
+    border-radius: 10px; /* Rounded corners */
+    z-index: -1; /* Place behind the aside */
+}
+
+footer {
+    background-color: #82b1ff; /* Soft Blue */
+    text-align: center;
+    font-size: 1em;
+    padding: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* New styles for buttons */
+.button {
+    background-color: #ffd54f; /* Bright Yellow */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1em;
+}
+
+.button:hover {
+    background-color: #ffca28; /* Darker Yellow */
+    transform: scale(1.05); /* Scale on hover */
+}
+
+/* New styles for cards */
+.card {
+    background-color: #ffffff; /* White */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    margin: 10px 0;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Add animation for sections */
+section h2 {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    nav, section, aside {
+        box-shadow: none;
+    }
+
+    nav:hover, section:hover, aside:hover {
+        transform: none;
+    }
+
+    header {
+        background: linear-gradient(45deg, #ff80ab, #82b1ff);
+    }
+
+    nav {
+        background-color: #ffccf9;
+        width: 25%;
+    }
+
+    section {
+        background-color: #b3e5fc;
+        width: 75%;
+    }
+
+    aside {
+        background-color: #ffb3c1;
+        width: 100%;
+    }
+
+   footer {
+    background-color: #82b1ff; /* Soft Blue */
+    text-align: center;
+    font-size: 1em;
+    padding: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: white; /* Warna ikon */
+    text-decoration: none;
+    font-size: 1.5em; /* Ukuran ikon */
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ffccf9; /* Warna saat hover */
+}
+
+}
+
+@media screen and (max-width: 425px) {
+    nav, section, aside {
+        padding: 15px;
+    }
+
+    header {
+        background: linear-gradient(45deg, #ff80ab, #82b1ff);
+    }
+
+    nav {
+        background-color: #ffccf9;
+        width: 100%;
+    }
+
+    section {
+        background-color: #b3e5fc;
+        width: 100%;
+    }
+
+    aside {
+        background-color: #ffb3c1;
+        width: 100%;
+    }
+
+    footer {
+        background-color: #82b1ff;
+    }
+}
